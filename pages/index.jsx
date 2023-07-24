@@ -1,8 +1,6 @@
 import {
   Flex,
-  Box,
   VStack,
-  SimpleGrid,
   IconButton,
   Text,
   useColorModeValue,
@@ -27,7 +25,7 @@ const IndexPage = () => {
         justifyContent="space-between"
         transition="ease-in-out .2s"
         borderRadius="3xl"
-        bg={useColorModeValue("#ffffff40", "#17223f40")}
+        bg={useColorModeValue("#ffffff40", "#00000040")}
       >
         <Sidebar collapse={collapse} />
       </Flex>
@@ -42,7 +40,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <IconButton
               aria-label="Menu Colapse"
@@ -65,7 +63,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <Text fontSize={30} color="gray.300">
               Main
@@ -82,7 +80,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <Text fontSize={30} color="gray.300">
               Main
@@ -97,7 +95,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <Text fontSize={30} color="gray.300">
               Main
@@ -114,7 +112,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <Text fontSize={30} color="gray.300">
               Main
@@ -129,7 +127,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <Text fontSize={30} color="gray.300">
               Main
@@ -144,7 +142,7 @@ const IndexPage = () => {
             flexDirection="column"
             position="relative"
             borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#17223f40")}
+            bg={useColorModeValue("#ffffff40", "#00000040")}
           >
             <Text fontSize={30} color="gray.300">
               Main
