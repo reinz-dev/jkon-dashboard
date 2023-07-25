@@ -1,6 +1,7 @@
 import {
   Flex,
   VStack,
+  HStack,
   IconButton,
   Text,
   useColorModeValue,
@@ -74,7 +75,7 @@ const IndexPage = () => {
           <Flex
             as="main"
             w="100%"
-            h="60%"
+            h="30%"
             alignItems="center"
             justifyContent="center"
             flexDirection="column"
@@ -89,7 +90,7 @@ const IndexPage = () => {
           <Flex
             as="main"
             w="100%"
-            h="40%"
+            h="70%"
             alignItems="center"
             justifyContent="center"
             flexDirection="column"
