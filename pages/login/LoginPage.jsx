@@ -26,6 +26,13 @@ const LoginPage = () => {
     }
   };
 
+  const handleKeyPress = (event) => {
+    // Jika tombol "Enter" ditekan dan form valid, maka lakukan login
+    if (event.key === "Enter" && username !== "" && password !== "") {
+      handleLogin();
+    }
+  };
+
   return (
     <Flex height="100vh" alignItems="center" justifyContent="center">
       <Box
@@ -44,6 +51,7 @@ const LoginPage = () => {
             placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            onKeyPress={handleKeyPress}
           />
         </FormControl>
         <FormControl id="password" mt={4} isRequired>
@@ -52,6 +60,7 @@ const LoginPage = () => {
             placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onKeyPress={handleKeyPress}
           />
         </FormControl>
         <Button colorScheme="blue" mt={5} w={250} onClick={handleLogin}>
