@@ -17,7 +17,7 @@ const LoginPage = () => {
   const handleLogin = () => {
     // Lakukan validasi kredensial di sini (misalnya dengan mengirimkan data ke server)
     // Gantikan komentar di bawah dengan validasi sesuai dengan username dan password yang benar
-    if (username === "reinz" && password === "29121994") {
+    if (username === "username" && password === "password") {
       // Jika login berhasil, alihkan ke halaman dashboard
       router.push("../dashboard/DashboardPage");
     } else {
