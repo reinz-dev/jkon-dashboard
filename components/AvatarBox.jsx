@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Text,
   Button,
   Popover,
   PopoverTrigger,
@@ -10,18 +11,28 @@ import {
 } from "@chakra-ui/react";
 
 export const AvatarBox = ({}) => (
-  <Popover isLazy>
+  <Popover>
     <PopoverTrigger>
-      <Button borderRadius="full" size={1}>
+      <Button borderRadius="full" width={2} height={10} variant="ghost">
         <Avatar name="Ridwan Sulaeman" bg="blue.300" size="xs" />
       </Button>
     </PopoverTrigger>
-    <PopoverContent bg="blue.900" color="white">
-      <PopoverHeader fontWeight="semibold">Customization</PopoverHeader>
-      <PopoverArrow bg="blue.900" />
+    <PopoverContent
+      width={200}
+      bg="blackAlpha.300"
+      color="white"
+      justifyContent="center"
+      align="center"
+    >
+      <PopoverArrow bg="blackAlpha.300" />
       <PopoverBody>
-        Tadaa!! The arrow color and background color is customized. Check the
-        props for each component.
+        <Avatar name="Ridwan Sulaeman" bg="blue.300" size="lg" mt={5} />
+        <Text fontSize={15} mt={2}>
+          Ridwan Sulaeman
+        </Text>
+        <Text fontSize={13} color="gray.500" mb={20}>
+          Cost Control
+        </Text>
       </PopoverBody>
     </PopoverContent>
   </Popover>
