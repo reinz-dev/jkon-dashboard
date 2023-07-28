@@ -1,5 +1,4 @@
 import { Box, Flex, Icon, IconButton, Text } from "@chakra-ui/react";
-import { AiOutlineSearch } from "react-icons/ai";
 import RdwnsLogo from "./icons/RdwnsLogo";
 
 export const Logo = ({ collapse }) => (
@@ -10,8 +9,8 @@ export const Logo = ({ collapse }) => (
     flexDirection={collapse ? "row" : "column"}
     gap={4}
   >
-    <Box display="flex" alignItems="center" gap={2}>
-      <Icon as={RdwnsLogo} fontSize={30} />
+    <Box display="flex" alignItems="center" gap={2} mb={5}>
+      <Icon as={RdwnsLogo} fontSize={30} mb={2} />
       {collapse && (
         <Text fontWeight="bold" fontSize={16}>
           FINANCE
@@ -21,13 +20,5 @@ export const Logo = ({ collapse }) => (
         </Text>
       )}
     </Box>
-    <IconButton
-      variant="ghost"
-      aria-label="search"
-      icon={<AiOutlineSearch />}
-      fontSize={26}
-      color="gray.400"
-      borderRadius="50%"
-    />
   </Flex>
 );

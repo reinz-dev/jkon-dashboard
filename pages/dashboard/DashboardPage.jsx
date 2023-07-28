@@ -3,14 +3,28 @@ import {
   VStack,
   IconButton,
   Text,
+  HStack,
+  Box,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
+import { useRouter } from "next/router";
 import { MdMenu } from "react-icons/md";
+import { AiOutlinePoweroff } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { Sidebar } from "../../components/Sidebar";
+import { AvatarBox } from "../../components/AvatarBox";
+import ThemeToggleButton from "../../components/theme-toggle-button";
 
 const DashboardPage = () => {
   const [collapse, setCollapse] = React.useState(false);
+  const router = useRouter();
+
+  const handleLogout = () => {
+    // Lakukan proses logout di sini (misalnya dengan menghapus token atau data sesi)
+    // Setelah logout berhasil, alihkan ke halaman login
+    router.push("../login/LoginPage");
+  };
 
   return (
     <Flex gap={3} w="full" h="100vh" paddingY={4}>
@@ -18,7 +32,7 @@ const DashboardPage = () => {
         as="aside"
         w="full"
         h="full"
-        maxW={collapse ? 350 : 100}
+        maxW={collapse ? 250 : 100}
         alignItems="start"
         padding={6}
         flexDirection="column"
@@ -29,127 +43,35 @@ const DashboardPage = () => {
       >
         <Sidebar collapse={collapse} />
       </Flex>
-      <Flex w="full" h="full" gap={3}>
-        <VStack w="30%">
-          <Flex
-            as="main"
-            w="full"
-            h="50%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
+      <Box w="full" h="full" gap={3}>
+        <Box w="full" align="right">
+          <IconButton
+            aria-label="Menu Colapse"
+            icon={<AiOutlineSearch />}
+            mr={2}
+            variant="ghost"
+            onClick={() => setCollapse(!collapse)}
+          />
+          <IconButton
+            aria-label="Menu Colapse"
+            icon={<MdMenu />}
             position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <IconButton
-              aria-label="Menu Colapse"
-              icon={<MdMenu />}
-              position="absolute"
-              top={6}
-              left={6}
-              onClick={() => setCollapse(!collapse)}
-            />
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-          <Flex
-            as="main"
-            w="full"
-            h="50%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
+            mr={2}
+            variant="ghost"
+            onClick={() => setCollapse(!collapse)}
+          />
+          <IconButton
+            aria-label="Menu Colapse"
+            icon={<AiOutlinePoweroff />}
             position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-        </VStack>
-        <VStack w="100%">
-          <Flex
-            as="main"
-            w="100%"
-            h="30%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
-            position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-          <Flex
-            as="main"
-            w="100%"
-            h="70%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
-            position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-        </VStack>
-        <VStack w="30%">
-          <Flex
-            as="main"
-            w="100%"
-            h="30%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
-            position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-          <Flex
-            as="main"
-            w="100%"
-            h="20%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
-            position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-          <Flex
-            as="main"
-            w="100%"
-            h="50%"
-            alignItems="center"
-            justifyContent="center"
-            flexDirection="column"
-            position="relative"
-            borderRadius="3xl"
-            bg={useColorModeValue("#ffffff40", "#00000040")}
-          >
-            <Text fontSize={30} color="gray.300">
-              Main
-            </Text>
-          </Flex>
-        </VStack>
-      </Flex>
+            mr={2}
+            variant="ghost"
+            onClick={handleLogout}
+          />
+          <ThemeToggleButton />
+          <AvatarBox />
+        </Box>
+      </Box>
     </Flex>
   );
 };

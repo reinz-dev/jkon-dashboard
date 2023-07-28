@@ -15,6 +15,7 @@ const DarkModeSwitch = () => {
       onClick={toggleColorMode}
       color={iconColor[colorMode]}
       borderRadius="50%"
+      mr={2}
     />
   );
 };
