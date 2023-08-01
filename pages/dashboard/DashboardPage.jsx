@@ -39,7 +39,7 @@ const DashboardPage = () => {
         justifyContent="space-between"
         transition="ease-in-out .2s"
         borderRadius="3xl"
-        bg={useColorModeValue("#ffffff40", "#00000040")}
+        bg={useColorModeValue("bgLight", "bgDark")}
       >
         <Sidebar collapse={collapse} />
       </Flex>
@@ -57,7 +57,9 @@ const DashboardPage = () => {
               icon={<MdMenu />}
               variant="ghost"
               onClick={() => setCollapse(!collapse)}
+              mr={2}
             />
+            Hallo Reinz, welcome back
           </Box>
           <Box>
             <IconButton
@@ -78,25 +80,26 @@ const DashboardPage = () => {
             <AvatarBox />
           </Box>
         </Flex>
-        <Flex w="full" h="3%" align="center" mt="1%" gap={2}>
+        <Flex w="full" h="3%" align="center" mt={2} gap={2}>
           <Flex
             w="70px"
             h="full"
             align="center"
             justify="center"
-            roundedStart={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            rounded={10}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
-            LOGO
+            ICON
           </Flex>
           <Flex
             w="full"
             h="full"
             align="center"
-            roundedEnd={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            justify="center"
+            rounded={10}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
-            MAIN
+            NEWS
           </Flex>
           <Flex
             w="20%"
@@ -104,18 +107,18 @@ const DashboardPage = () => {
             align="center"
             justify="center"
             rounded={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
             MAIN
           </Flex>
         </Flex>
-        <Flex w="full" h="50%" mt="1%" gap={3}>
+        <Flex w="full" h="50%" mt={2} gap={3}>
           <Flex
             w="300px"
             justify="center"
             align="center"
             rounded={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
             MAIN
           </Flex>
@@ -124,18 +127,18 @@ const DashboardPage = () => {
             justify="center"
             align="center"
             rounded={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
             MAIN
           </Flex>
         </Flex>
-        <Flex w="full" h="40%" mt={2} gap={3}>
+        <Flex w="full" h="41.5%" mt={2} gap={3}>
           <Flex
             w="300px"
             justify="center"
             align="center"
             rounded={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
             MAIN
           </Flex>
@@ -144,7 +147,7 @@ const DashboardPage = () => {
             justify="center"
             align="center"
             rounded={10}
-            bg={useColorModeValue("#ffffff40", "#00000040")}
+            bg={useColorModeValue("bgLight", "bgDark")}
           >
             MAIN
           </Flex>
@@ -155,7 +158,7 @@ const DashboardPage = () => {
         justify="center"
         align="center"
         rounded={10}
-        bg={useColorModeValue("#ffffff40", "#00000040")}
+        bg={useColorModeValue("bgLight", "bgDark")}
       >
         MAIN
       </Flex>

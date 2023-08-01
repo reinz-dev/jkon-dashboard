@@ -40,7 +40,8 @@ const LoginPage = () => {
         maxWidth="md"
         borderRadius={8}
         boxShadow="lg"
-        bg="blackAlpha.400"
+        bg="blackAlpha.300"
+        backdropFilter="blur(8px)"
       >
         <Box fontSize={25} align="center" justify="center" mb={10}>
           <Text justifyContent="center">Login</Text>

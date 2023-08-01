@@ -39,6 +39,17 @@ const HomePage = () => {
     setLoggedIn(false);
   };
 
+  const data = [
+  // Daftar data yang ingin Anda cari
+];
+
+const Home = () => {
+  const handleSearch = (query) => {
+    // Logika untuk melakukan pencarian sesuai dengan 'query'
+    // Misalnya, filter data berdasarkan query
+    console.log('Searching for:', query);
+  };
+
   return (
     <div>
       {!loggedIn ? (
