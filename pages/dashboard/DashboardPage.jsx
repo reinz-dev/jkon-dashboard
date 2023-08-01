@@ -1,12 +1,8 @@
 import {
   Flex,
-  VStack,
   IconButton,
-  Text,
-  HStack,
   Box,
   Modal,
-  ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalBody,
