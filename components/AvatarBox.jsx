@@ -8,6 +8,7 @@ import {
   PopoverHeader,
   PopoverArrow,
   PopoverBody,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 export const AvatarBox = ({}) => (
@@ -19,15 +20,16 @@ export const AvatarBox = ({}) => (
     </PopoverTrigger>
     <PopoverContent
       width={200}
-      bg="blackAlpha.300"
       color="white"
+      borderColor="blackAlpha.500"
       justifyContent="center"
       align="center"
+      backdropFilter="blur(8px)"
+      bg={useColorModeValue("whitesmoke", "blackAlpha.500")}
     >
-      <PopoverArrow bg="blackAlpha.300" />
       <PopoverBody>
         <Avatar name="Ridwan Sulaeman" bg="blue.300" size="lg" mt={5} />
-        <Text fontSize={15} mt={2}>
+        <Text fontSize={15} mt={2} color="whitesmoke">
           Ridwan Sulaeman
         </Text>
         <Text fontSize={13} color="gray.500" mb={20}>
