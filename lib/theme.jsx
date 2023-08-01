@@ -4,7 +4,7 @@ import { mode } from "@chakra-ui/theme-tools";
 const styles = {
   global: (props) => ({
     body: {
-      bg: mode("gray.200", "#17223F")(props),
+      bg: mode("gray.300", "#17223F")(props),
     },
   }),
 };
@@ -68,6 +68,8 @@ const colors = {
   grassBlueLight: "#3182ce",
   grayDark: "gray.500",
   grayLight: "whiteAlpha.500",
+  bgDark: "#00000040",
+  bgLight: "#ffffff40",
   separatorGray: "gray.700",
   separatorWhite: "whiteAlpha.800",
   textDark: "whiteAlpha.800",
