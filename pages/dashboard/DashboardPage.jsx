@@ -8,6 +8,7 @@ import {
   ModalBody,
   ModalCloseButton,
   useColorModeValue,
+  HStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
@@ -125,15 +126,29 @@ const DashboardPage = () => {
           </Flex>
         </Flex>
         <Flex w="full" h="50%" mt={2} gap={3}>
-          <Flex
-            w="300px"
-            justify="center"
-            align="center"
-            rounded={10}
-            bg={useColorModeValue("bgLight", "bgDark")}
-          >
-            MAIN
-          </Flex>
+          <Box w="300px" h="full">
+            <Flex
+              w="300px"
+              h="25%"
+              mb={2}
+              justify="center"
+              align="center"
+              rounded={10}
+              bg={useColorModeValue("bgLight", "bgDark")}
+            >
+              MAIN
+            </Flex>
+            <Flex
+              w="300px"
+              h="73.8%"
+              justify="center"
+              align="center"
+              rounded={10}
+              bg={useColorModeValue("bgLight", "bgDark")}
+            >
+              MAIN
+            </Flex>
+          </Box>
           <Flex
             w="full"
             justify="center"
@@ -148,7 +163,7 @@ const DashboardPage = () => {
         </Flex>
         <Flex w="full" h="41.5%" mt={2} gap={3}>
           <Flex
-            w="300px"
+            w="1200px"
             justify="center"
             align="center"
             rounded={10}
@@ -168,7 +183,7 @@ const DashboardPage = () => {
         </Flex>
       </Box>
       <Flex
-        w="20%"
+        w="15%"
         justify="center"
         align="center"
         rounded={10}
