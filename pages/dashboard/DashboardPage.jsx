@@ -8,17 +8,16 @@ import {
   ModalBody,
   ModalCloseButton,
   useColorModeValue,
-  HStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { MdMenu } from "react-icons/md";
 import { AiOutlinePoweroff } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
+import { HiOutlineNewspaper } from "react-icons/hi";
 import { Sidebar } from "../../components/Sidebar";
 import { AvatarBox } from "../../components/AvatarBox";
 import ThemeToggleButton from "../../components/theme-toggle-button";
-import { MotionBox } from "framer-motion";
 
 const DashboardPage = () => {
   const [collapse, setCollapse] = React.useState(false);
@@ -93,26 +92,19 @@ const DashboardPage = () => {
             <AvatarBox />
           </Box>
         </Flex>
-        <Flex w="full" h="3%" align="center" mt={2} gap={2}>
-          <Flex
-            w="70px"
-            h="full"
-            align="center"
-            justify="center"
-            rounded={10}
-            bg={useColorModeValue("bgLight", "bgDark")}
-          >
-            ICON
+        <Flex w="full" h="3%" align="center" mt={2}>
+          <Flex w="50px" h="full" align="center" justify="center" rounded={10}>
+            <IconButton
+              aria-label="Menu Colapse"
+              icon={<HiOutlineNewspaper />}
+              position="relative"
+              variant="ghost"
+              onClick={handleLogout}
+            />
           </Flex>
-          <Flex
-            w="full"
-            h="full"
-            align="center"
-            justify="center"
-            rounded={10}
-            bg={useColorModeValue("bgLight", "bgDark")}
-          >
-            NEWS
+          <Flex w="full" h="full" rounded={10} align="center">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry
           </Flex>
           <Flex
             w="20%"
@@ -140,7 +132,7 @@ const DashboardPage = () => {
             </Flex>
             <Flex
               w="300px"
-              h="73.8%"
+              h="73%"
               justify="center"
               align="center"
               rounded={10}
