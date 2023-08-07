@@ -10,7 +10,7 @@ export const Logo = ({ collapse }) => (
     gap={4}
   >
     <Box display="flex" alignItems="center" gap={2} mb={5}>
-      <Icon as={RdwnsLogo} fontSize={30} mb={2} />
+      <Icon as={RdwnsLogo} fontSize={40} mb={2} />
       {collapse && (
         <Text fontWeight="bold" fontSize={16}>
           FINANCE

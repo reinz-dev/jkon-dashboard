@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, Image, ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "../lib/theme";
 
 export default function Chakra({ children }) {
