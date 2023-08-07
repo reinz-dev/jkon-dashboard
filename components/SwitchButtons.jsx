@@ -17,8 +17,8 @@ export const SwitchButtons = ({ collapse }) => {
 
   if (!collapse) {
     return (
-      <Flex w="full" alignItems="center" textAlign="center" py={6}>
-        <Switch w="full" colorScheme="blue" />
+      <Flex w="full" alignItems="center" textAlign="center">
+        <Switch w="full" colorScheme="blue" mb={10} />
       </Flex>
     );
   }
