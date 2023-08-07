@@ -1,41 +1,31 @@
 import { List, ListItem } from "@chakra-ui/react";
 import {
-  MdOutlineSpaceDashboard,
-  MdMailOutline,
-  MdOutlineFlag,
   MdCalendarToday,
   MdOutlineSupervisorAccount,
-  MdOutlineSettingsInputComposite,
-  MdOutlineChatBubbleOutline,
-  MdOutlineNotificationsActive,
   MdContentPaste,
+  MdHome,
 } from "react-icons/md";
-import { BiNews } from "react-icons/bi";
+import { FaHardHat } from "react-icons/fa";
+import { SiGooglenews } from "react-icons/si";
 import { NavItem } from "./NavItem";
 
 const items = [
   {
     type: "link",
     label: "Dashboard",
-    icon: MdOutlineSpaceDashboard,
+    icon: MdHome,
     path: "/",
   },
   {
     type: "link",
     label: "News",
-    icon: BiNews,
-    path: "/",
-  },
-  {
-    type: "link",
-    label: "E-Learning",
-    icon: MdMailOutline,
+    icon: SiGooglenews,
     path: "/",
   },
   {
     type: "link",
     label: "Prosedur Kerja",
-    icon: MdOutlineFlag,
+    icon: FaHardHat,
     path: "/",
   },
   {
@@ -54,32 +44,6 @@ const items = [
     type: "link",
     label: "Contact",
     icon: MdOutlineSupervisorAccount,
-    path: "/",
-  },
-
-  {
-    type: "header",
-    label: "Account",
-  },
-
-  {
-    type: "link",
-    label: "Notifications",
-    icon: MdOutlineNotificationsActive,
-    path: "/",
-    notifications: 24,
-  },
-  {
-    type: "link",
-    label: "Chat",
-    icon: MdOutlineChatBubbleOutline,
-    path: "/",
-    messages: 8,
-  },
-  {
-    type: "link",
-    label: "Settings",
-    icon: MdOutlineSettingsInputComposite,
     path: "/",
   },
 ];
