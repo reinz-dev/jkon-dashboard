@@ -1,5 +1,6 @@
 import {
   Flex,
+  Text,
   IconButton,
   Box,
   Modal,
@@ -11,10 +12,20 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import {
+  AiOutlinePoweroff,
+  AiOutlineSearch,
+  AiFillPicture,
+  AiOutlineFundProjectionScreen,
+} from "react-icons/ai";
 import { MdMenu } from "react-icons/md";
-import { AiOutlinePoweroff } from "react-icons/ai";
-import { AiOutlineSearch } from "react-icons/ai";
-import { HiOutlineNewspaper } from "react-icons/hi";
+import { SiGooglenews } from "react-icons/si";
+import { FaUser } from "react-icons/fa";
+import {
+  BsThreeDots,
+  BsFillChatFill,
+  BsFillCalendar2CheckFill,
+} from "react-icons/bs";
 import { Sidebar } from "../../components/Sidebar";
 import { AvatarBox } from "../../components/AvatarBox";
 import ThemeToggleButton from "../../components/theme-toggle-button";
@@ -39,18 +50,24 @@ const DashboardPage = () => {
   };
 
   return (
-    <Flex gap={3} w="full" h="100vh" paddingY={4}>
+    <Flex
+      gap={3}
+      w="full"
+      h="100vh"
+      paddingY={4}
+      bgImg="../../public/bg/background-dark.jpg"
+    >
       <Flex
         as="aside"
         w="full"
         h="full"
-        maxW={collapse ? 250 : 100}
-        alignItems="start"
         padding={6}
+        maxW={collapse ? 220 : 90}
+        alignItems="start"
         flexDirection="column"
         justifyContent="space-between"
         transition="ease-in-out .2s"
-        borderRadius="3xl"
+        borderRadius={20}
         bg={useColorModeValue("bgLight", "bgDark")}
       >
         <Sidebar collapse={collapse} />
@@ -92,19 +109,21 @@ const DashboardPage = () => {
             <AvatarBox />
           </Box>
         </Flex>
-        <Flex w="full" h="3%" align="center" mt={2}>
-          <Flex w="50px" h="full" align="center" justify="center" rounded={10}>
-            <IconButton
-              aria-label="Menu Colapse"
-              icon={<HiOutlineNewspaper />}
-              position="relative"
-              variant="ghost"
-              onClick={handleLogout}
-            />
-          </Flex>
-          <Flex w="full" h="full" rounded={10} align="center">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry
+        <Flex w="full" h="30px" align="center" justify="space-between">
+          <Flex padding={2} mr={3} align="center" gap={3}>
+            <SiGooglenews size={20} />
+            <Flex
+              w="80px"
+              justify="center"
+              rounded={15}
+              bg={useColorModeValue("blue.600", "blue.500")}
+            >
+              today
+            </Flex>
+            <Flex rounded={10} align="center">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </Flex>
           </Flex>
           <Flex
             w="20%"
@@ -123,34 +142,52 @@ const DashboardPage = () => {
               w="300px"
               h="25%"
               mb={2}
-              justify="center"
-              align="center"
               rounded={10}
+              padding={3}
               bg={useColorModeValue("bgLight", "bgDark")}
             >
-              MAIN
+              <Flex w="full" h="20px" justify="space-between" align="center">
+                <Flex align="center" gap={2}>
+                  <FaUser size={12} />
+                  <Text fontSize={12}>Login user</Text>
+                </Flex>
+                <IconButton variant="ghost" size={4} rounded="full">
+                  <BsThreeDots />
+                </IconButton>
+              </Flex>
             </Flex>
             <Flex
               w="300px"
               h="73%"
-              justify="center"
-              align="center"
               rounded={10}
+              padding={3}
               bg={useColorModeValue("bgLight", "bgDark")}
             >
-              MAIN
+              <Flex w="full" h="20px" justify="space-between" align="center">
+                <Flex align="center" gap={2}>
+                  <FaUser size={12} />
+                  <Text fontSize={12}>Login activities</Text>
+                </Flex>
+                <IconButton variant="ghost" size={4} rounded="full">
+                  <BsThreeDots />
+                </IconButton>
+              </Flex>
             </Flex>
           </Box>
           <Flex
             w="full"
-            justify="center"
-            align="center"
             rounded={10}
+            padding={3}
             bg={useColorModeValue("bgLight", "bgDark")}
             onClick={handleOpenModal}
             cursor="pointer"
           >
-            MAIN
+            <Flex w="full" h="20px" justify="space-between" align="center">
+              <Flex align="center" gap={2}>
+                <AiFillPicture size={15} />
+                <Text fontSize={12}>Gallery</Text>
+              </Flex>
+            </Flex>
           </Flex>
         </Flex>
         <Flex w="full" h="41.5%" mt={2} gap={3}>
@@ -174,15 +211,76 @@ const DashboardPage = () => {
           </Flex>
         </Flex>
       </Box>
-      <Flex
-        w="15%"
-        justify="center"
-        align="center"
-        rounded={10}
-        bg={useColorModeValue("bgLight", "bgDark")}
-      >
-        MAIN
-      </Flex>
+      <Box h="full" w="270px">
+        <Box
+          h="250px"
+          padding={3}
+          mb={2}
+          rounded={10}
+          bg={useColorModeValue("bgLight", "bgDark")}
+        >
+          <Flex w="full" h="20px" justify="space-between" align="center">
+            <Flex align="center" gap={2}>
+              <BsFillChatFill size={12} />
+              <Text fontSize={12}>Online</Text>
+            </Flex>
+            <IconButton variant="ghost" size={4} rounded="full">
+              <BsThreeDots />
+            </IconButton>
+          </Flex>
+        </Box>
+        <Box
+          h="268px"
+          padding={3}
+          mb={2}
+          rounded={10}
+          bg={useColorModeValue("bgLight", "bgDark")}
+        >
+          <Flex w="full" h="20px" justify="space-between" align="center">
+            <Flex align="center" gap={2}>
+              <AiOutlineFundProjectionScreen size={15} />
+              <Text fontSize={12}>Project goals</Text>
+            </Flex>
+            <IconButton variant="ghost" size={4} rounded="full">
+              <BsThreeDots />
+            </IconButton>
+          </Flex>
+        </Box>
+        <Box
+          h="220px"
+          padding={3}
+          mb={2}
+          rounded={10}
+          bg={useColorModeValue("bgLight", "bgDark")}
+        >
+          <Flex w="full" h="20px" justify="space-between" align="center">
+            <Flex align="center" gap={2}>
+              <BsFillCalendar2CheckFill size={12} />
+              <Text fontSize={12}>Calendar</Text>
+            </Flex>
+            <IconButton variant="ghost" size={4} rounded="full">
+              <BsThreeDots />
+            </IconButton>
+          </Flex>
+        </Box>
+        <Box
+          h="162px"
+          padding={3}
+          mb={2}
+          rounded={10}
+          bg={useColorModeValue("bgLight", "bgDark")}
+        >
+          <Flex w="full" h="20px" justify="space-between" align="center">
+            <Flex align="center" gap={2}>
+              <FaUser size={12} />
+              <Text fontSize={12}>Wedding</Text>
+            </Flex>
+            <IconButton variant="ghost" size={4} rounded="full">
+              <BsThreeDots />
+            </IconButton>
+          </Flex>
+        </Box>
+      </Box>
       <Modal isCentered isOpen={isOpen} onClose={handleCloseModal} size="6xl">
         <ModalContent bg="transparent" backdropFilter="blur(8px)">
           <ModalHeader>Modal Judul</ModalHeader>
