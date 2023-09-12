@@ -137,9 +137,9 @@ const DashboardPage = () => {
           </Flex>
         </Flex>
         <Flex w="full" h="50%" mt={2} gap={3}>
-          <Box w="300px" h="full">
+          <Box w="20%" h="full">
             <Flex
-              w="300px"
+              w="full"
               h="25%"
               mb={2}
               rounded={10}
@@ -155,9 +155,10 @@ const DashboardPage = () => {
                   <BsThreeDots />
                 </IconButton>
               </Flex>
+              <Flex>test</Flex>
             </Flex>
             <Flex
-              w="300px"
+              w="full"
               h="73%"
               rounded={10}
               padding={3}
@@ -192,7 +193,7 @@ const DashboardPage = () => {
         </Flex>
         <Flex w="full" h="41.5%" mt={2} gap={3}>
           <Flex
-            w="1200px"
+            w="50%"
             justify="center"
             align="center"
             rounded={10}
