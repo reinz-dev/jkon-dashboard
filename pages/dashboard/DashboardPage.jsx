@@ -155,7 +155,6 @@ const DashboardPage = () => {
                   <BsThreeDots />
                 </IconButton>
               </Flex>
-              <Flex>test</Flex>
             </Flex>
             <Flex
               w="full"
